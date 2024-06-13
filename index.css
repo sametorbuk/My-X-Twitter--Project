@@ -83,18 +83,29 @@ body {
     flex-direction: column;
     color: white;
     gap: 5px;
+    flex: 10 ;
 }
 
-.twit-create-details button {
-    color: rgb(29, 155, 240);
-    background-color: black;
+
+
+.twit-options-send-button {
+    display: flex;
+  
 }
+
+
 
 .twit-create-options {
     margin-top: 14px;
     padding-top: 12px;
     color: rgb(29, 155, 240);
+    flex: 4;
 }
+
+
+
+
+
 
 
 
@@ -142,6 +153,15 @@ body {
     margin-top: 20px;
 }
 
+.send-button {
+    flex: 1;
+    background-color: rgb(29 155 240 / 47%);
+    color: #ffffff9e;
+    padding: 0px 4px;
+    border-radius: 19px;
+    font-size: 16px;
+    
+}
 
 /*
 samet
