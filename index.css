@@ -75,8 +75,10 @@ body {
     flex : 8 ;
 }
 
-.right-options {
+.right-advice {
     flex: 4 ;
+    color: white;
+    margin-top: 20px;
 }
 
 .twit-create {
@@ -91,6 +93,12 @@ body {
     
 }
 
+
+
+.right-left-content {
+    display: flex;
+    
+}
 
 
 /*
