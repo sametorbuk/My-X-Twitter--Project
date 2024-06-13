@@ -13,6 +13,7 @@ body {
     color: white ;
     font-size: 34px;
     margin-right: 21px;
+    
    
 }
 
@@ -23,9 +24,10 @@ body {
     height: 600px;
     flex-direction: column;
     align-items: flex-end;
-    gap: 24px;
+    gap: 21px;
     position: fixed;
     margin-left: 44px;
+    overflow-y: auto;
    
    
    
@@ -84,13 +86,37 @@ body {
     margin-left: 100px;
 }
 
+.twit-create img {
+    width: 51px;
+    border-radius: 30px;
+    margin-right: 18px;
+    height: 52px;
+    
+}
+
+
 .twit-create-details {
     display: flex;
     flex-direction: column;
     color: white;
     gap: 5px;
     flex: 10 ;
+} 
+
+.post1 {
+    display: flex;
+    margin-left: 100px;
 }
+
+.post1 img {
+    width: 51px;
+    border-radius: 30px;
+    margin-right: 18px;
+    height: 52px;
+    
+}
+
+
 
 
 
@@ -134,14 +160,6 @@ body {
 
 
 
-.twit-create img {
-    width: 51px;
-    border-radius: 30px;
-    margin-right: 18px;
-    height: 52px;
-    
-}
-
 
 
 .right-left-content {
@@ -151,7 +169,11 @@ body {
 
 .center-content {
     flex : 8 ;
+    flex-direction: column;
 }
+
+
+
 
 .right-advice {
     flex: 4 ;
