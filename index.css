@@ -162,6 +162,13 @@ body {
     font-size: 16px;
     }
 
+    .twit-create-options  :nth-child(2),
+    .twit-create-options  :nth-child(3),
+    .twit-create-options  :nth-child(4),
+    .twit-create-options  :nth-child(5) {
+        margin-left: 20px;
+    }
+
 /*
 samet
 */
