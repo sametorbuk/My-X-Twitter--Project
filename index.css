@@ -79,6 +79,18 @@ body {
     flex: 4 ;
 }
 
+.twit-create {
+    margin-top:43px ;
+}
+
+
+.twit-create img {
+ width: 39px; 
+ border-radius: 30px;
+ margin-right: 18px;
+    
+}
+
 
 
 /*
