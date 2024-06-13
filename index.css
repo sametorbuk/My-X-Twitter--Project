@@ -81,13 +81,47 @@ body {
 .twit-create-details {
     display: flex;
     flex-direction: column;
+    color: white;
+    gap: 5px;
+}
+
+.twit-create-details button {
+    color: rgb(29, 155, 240);
+    background-color: black;
+}
+
+.twit-create-options {
+    margin-top: 14px;
+    padding-top: 12px;
+    color: rgb(29, 155, 240);
 }
 
 
+
+.membership-advice {
+    border: 2px solid gray;
+    padding-top: -14px;
+    margin-top: 28px;
+    border-radius: 22px;
+    width: 233px;
+    margin-left: 25px;
+}
+
+.membership-advice button {
+    background-color: rgb(29, 155, 240);
+    color: white;
+    padding: 10px 22px;
+    border-radius: 19px;
+}
+
+
+
+
 .twit-create img {
- width: 39px; 
- border-radius: 30px;
- margin-right: 18px;
+    width: 51px;
+    border-radius: 30px;
+    margin-right: 18px;
+    height: 52px;
     
 }
 
