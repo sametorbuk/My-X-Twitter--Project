@@ -54,7 +54,8 @@ body {
 
  .header-right {
     margin-left: 25px;
-    width: 400px;
+    width: 505px;
+    
  }
  
  .header-right button {
@@ -62,6 +63,7 @@ body {
     padding: 12px 48px;
     background: black;
     color: gray;
+    margin-left: 162px;
  }
 
  
@@ -151,7 +153,46 @@ body {
     flex: 4 ;
     color: white;
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+
 }
+
+.topics-to-be-discussed {
+    display: flex;
+    flex-direction: column;
+}
+
+.topics1,
+.topics2,
+.topics3,
+.topics4,
+.topics5,
+.topics6 {
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.topics1-row1 {
+    display: flex;
+
+}
+
+.topics1-row1 button {
+    flex: 3;
+    margin: 13px 2px;
+    background: black;
+    color: white;
+}
+
+.topics1-row1 p {
+    flex: 44 ;
+}
+
+
+
 
 .send-button {
     flex: 1;
