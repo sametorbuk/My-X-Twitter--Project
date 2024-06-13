@@ -161,7 +161,13 @@ body {
 .topics-to-be-discussed {
     display: flex;
     flex-direction: column;
+    border: 2px solid gray;
+    margin-top: 28px;
+    border-radius: 22px;
+    width: 233px;
+    margin-left: 25px;
 }
+
 
 .topics1,
 .topics2,
@@ -171,23 +177,39 @@ body {
 .topics6 {
     display: flex;
     flex-direction: column;
+    padding: 10px 0px;
     
     
 }
 
-.topics1-row1 {
+.topics1-row1,
+.topics2-row1,
+.topics3-row1,
+.topics4-row1,
+.topics5-row1,
+.topics6-row1 {
     display: flex;
 
 }
 
-.topics1-row1 button {
+.topics1-row1 button,
+.topics2-row1 button,
+.topics3-row1 button,
+.topics4-row1 button,
+.topics5-row1 button,
+.topics6-row1 button {
     flex: 3;
     margin: 13px 2px;
     background: black;
     color: white;
 }
 
-.topics1-row1 p {
+.topics1-row1 p,
+.topics2-row1 p ,
+.topics3-row1 p ,
+.topics4-row1 p ,
+.topics5-row1 p ,
+.topics6-row1 p  {
     flex: 44 ;
 }
 
