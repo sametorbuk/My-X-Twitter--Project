@@ -106,14 +106,36 @@ body {
 .post1 {
     display: flex;
     margin-left: 100px;
+    color: white;
+
 }
 
-.post1 img {
+.post1-details {
+    flex: 10;
+    display: flex;
+    flex-direction: column;
+}
+
+.post1-details-row1 {
+    display: flex;
+    align-items: center;
+}
+
+
+.post1 h3 {
+    flex: 3 ;
+}
+
+.post1-prof-photo {
     width: 51px;
     border-radius: 30px;
     margin-right: 18px;
     height: 52px;
     
+}
+
+.post1-blue-tick {
+    width: 14px;
 }
 
 
@@ -164,6 +186,7 @@ body {
 
 .right-left-content {
     display: flex;
+    align-items: stretch;
     
 }
 
