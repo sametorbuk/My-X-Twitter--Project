@@ -52,24 +52,37 @@ body {
  }
 
  .header-left button {
-    padding: 12px 48px;
+    padding: 12px 85px;
     background: black;
     color: gray;
+    white-space: nowrap;
  }
 
  .header-right {
     margin-left: 25px;
     width: 505px;
+    height: 43px;
     
  }
  
- .header-right button {
+ .search-box {
     width: 253px;
     padding: 12px 48px;
-    background: black;
-    color: gray;
-   
- }
+    background: #736f6f87;
+    color: white;
+    margin-left: 199px;
+    border-radius: 30px;
+}
+
+
+.header-right i {
+    position: relative;
+    color: #989595e6;
+    left: 214px;
+    bottom: 28px;
+}
+
+ 
 
  
 
@@ -132,7 +145,8 @@ body {
 }
 
 .dobt {
-    margin-bottom: 24px;
+
+    padding-bottom: 6px;
 }
 
 .post1-details p {
@@ -259,6 +273,7 @@ body {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+    margin-left: 60px ;
 
 }
 
@@ -271,6 +286,16 @@ body {
     width: 233px;
     margin-left: 25px;
 }
+
+.topics1 p ,
+.topics2 p,
+.topics3 p,
+.topics4 p,
+.topics5 p,
+.topics6 p {
+    margin: 0;
+}
+
 
 
 .topics1,
@@ -293,6 +318,7 @@ body {
 .topics5-row1,
 .topics6-row1 {
     display: flex;
+    height: 20px;
 
 }
 
