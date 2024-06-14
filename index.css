@@ -168,8 +168,13 @@ body {
     aspect-ratio: 4 / 5;
     width: 646px;
     height: 558px;
+    margin-top: 18px;
+    border-radius: 15px;
 }
 
+.post1-interaction-buttons {
+    display: flex;
+}
 
 
 
