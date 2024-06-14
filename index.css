@@ -119,6 +119,31 @@ body {
 .post1-details-row1 {
     display: flex;
     align-items: center;
+    height: 24px;
+}
+.post1-details-row1-left{
+    display: flex;
+    align-items: center;
+    flex: 9;
+}
+
+.post1-details-row1-left p {
+    margin-left: 8px
+}
+
+.dobt {
+    margin-bottom: 24px;
+}
+
+.post1-details p {
+    margin: 0;
+}
+
+.post1-details-row1 button {
+    flex: 0;
+    margin: 13px 2px;
+    background: black;
+    color: white;
 }
 
 
@@ -136,8 +161,14 @@ body {
 
 .post1-blue-tick {
     width: 14px;
+    margin-left: 5px;
 }
 
+.post1-main-photo {
+    aspect-ratio: 4 / 5;
+    width: 646px;
+    height: 558px;
+}
 
 
 
