@@ -18,6 +18,10 @@ body {
    
 }
 
+.left-sidebar i:hover {
+    background: gray;
+}
+
 
 .left-sidebar {
     display: flex;
@@ -57,12 +61,15 @@ body {
     background: black;
     color: gray;
     white-space: nowrap;
-
+    
     
  }
 
- .header-left button:hover {
-    background: rgba(128, 128, 128, 0.24);
+ .header-left button:hover  {
+    background-color: rgba(74, 74, 74, 0.5); 
+    backdrop-filter: blur(25px);
+ 
+   
  }
 
  .header-left button:focus {
