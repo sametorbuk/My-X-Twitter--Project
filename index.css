@@ -176,6 +176,25 @@ body {
     display: flex;
 }
 
+.post1-interaction-buttons-left {
+    display: flex;
+    flex: 5;
+    justify-content: space-between;
+}
+.post1-interaction-buttons-right {
+    flex: 2;
+    
+    margin-left: 90px;
+}
+
+.post1-interaction-buttons-right :nth-child(2) {
+    margin-left: 22px;
+}
+
+.post1-interaction-buttons-right :nth-child(1) {
+    margin-left: 67px ;
+}
+
 
 
 .twit-options-send-button {
