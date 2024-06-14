@@ -91,6 +91,7 @@ body {
     color: white;
     border-radius: 30px;
     margin-left: 50px;
+    border: 0;
 }
 
 .input:focus {
@@ -119,7 +120,8 @@ body {
     margin-top: 43px;
     display: flex;
     margin-left: 100px;
-    padding: 18px ;
+    padding: 18px;
+    border: 1px solid gray;
 }
 
 .twit-create img {
@@ -286,12 +288,12 @@ body {
 
 
 .membership-advice {
-    border: 2px solid gray;
-    padding-top: -14px;
+    border: 1px solid gray;
     margin-top: 28px;
     border-radius: 22px;
     width: 233px;
     margin-left: 25px;
+    padding: 12px;
 }
 
 .membership-advice button {
@@ -299,6 +301,7 @@ body {
     color: white;
     padding: 10px 22px;
     border-radius: 19px;
+    border: 0;
 }
 
 
@@ -333,11 +336,12 @@ body {
 .topics-to-be-discussed {
     display: flex;
     flex-direction: column;
-    border: 2px solid gray;
+    border: 1px solid gray;
     margin-top: 28px;
     border-radius: 22px;
     width: 233px;
     margin-left: 25px;
+    padding: 13px;
 }
 
 .topics1 p ,
@@ -406,6 +410,7 @@ body {
     padding: 0px 4px;
     border-radius: 19px;
     font-size: 16px;
+    border: 0;
     }
 
     .twit-create-options  :nth-child(2),
