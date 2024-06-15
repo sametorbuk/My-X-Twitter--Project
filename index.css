@@ -1,6 +1,6 @@
 * {
     border: 1px solid purple;
-    
+    border: 0
 }
 
 body {
@@ -80,7 +80,7 @@ body {
     white-space: nowrap;
     background-color: rgba(10, 10, 10, 0.363);
     backdrop-filter: blur(25px);
-    
+    border: 0 ;
  }
 
  .header-left button:hover  {
@@ -138,7 +138,7 @@ body {
     display: flex;
     margin-left: 100px;
     padding: 18px;
-    border: 1px solid gray;
+    border: 1px solid #403f3f;
 }
 
 .twit-create img {
@@ -168,7 +168,7 @@ body {
     margin-left: 100px;
     color: white;
     padding: 18px;
-    border: 1px solid #555555;
+    border: 1px solid #403f3f;
 }
 
 .post1-details {
@@ -305,7 +305,7 @@ body {
 
 
 .membership-advice {
-    border: 1px solid gray;
+    border: 1px solid #403f3f;
     margin-top: 28px;
     border-radius: 22px;
     width: 233px;
@@ -353,7 +353,7 @@ body {
 .topics-to-be-discussed {
     display: flex;
     flex-direction: column;
-    border: 1px solid gray;
+    border: 1px solid #403f3f;
     margin-top: 28px;
     border-radius: 22px;
     width: 233px;
@@ -471,13 +471,13 @@ body {
 .follow-advice-3-profil-info {
     display: flex;
     flex-direction: column;
-    flex: 4 ;
+    flex: 18;
 }
 
 .follow-advice-1 button ,
 .follow-advice-2 button ,
 .follow-advice-3 button {
-    margin: 5px;
+    margin: 9px;
     flex: 5;
     padding: 6px 10px;
     white-space: nowrap;
@@ -498,8 +498,18 @@ body {
      margin: 0;
 }
 
+.follow-advice-2-profil-info h4 img {
+    position: relative;
+    width: 14px;
+    left: 5px;
+    height: 14px;
+    top: 2px;
+}
 
-
+.follow-advice :nth-child(5) ,
+.topics-to-be-discussed :nth-child(7) {
+   color:  rgb(29, 155, 240);
+}
 
 
 
