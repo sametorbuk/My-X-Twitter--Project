@@ -437,6 +437,73 @@ body {
         margin-left: 20px;
     }
 
+ .follow-advice {
+     display: flex;
+    flex-direction: column;
+     margin: 25px;
+     margin-right: 66px;
+    border: 1px solid gray;
+    border-radius: 22px;
+    gap: 19px ;
+
+ }
+
+ .follow-advice-1 ,
+ .follow-advice-2 ,
+ .follow-advice-3 {
+    display: flex;
+ }
+
+
+
+.follow-advice-1 img ,
+.follow-advice-2 img ,
+.follow-advice-3 img {
+    width: 51px;
+    border-radius: 30px;
+    margin-right: 18px;
+    height: 52px;
+    flex: 2
+}
+
+.follow-advice-1-profil-info ,
+.follow-advice-2-profil-info ,
+.follow-advice-3-profil-info {
+    display: flex;
+    flex-direction: column;
+    flex: 4 ;
+}
+
+.follow-advice-1 button ,
+.follow-advice-2 button ,
+.follow-advice-3 button {
+    margin: 5px;
+    flex: 5;
+    padding: 6px 10px;
+    white-space: nowrap;
+    border-radius: 30px;
+
+} 
+
+.follow-advice-1-profil-info h4 ,
+.follow-advice-2-profil-info h4 ,
+.follow-advice-3-profil-info h4 {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.follow-advice-1-profil-info p ,
+.follow-advice-2-profil-info p ,
+.follow-advice-3-profil-info p {
+     margin: 0;
+}
+
+
+
+
+
+
+
 /*
 samet
 */
