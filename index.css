@@ -46,6 +46,7 @@ body {
     color: rgba(227, 224, 224, 0.534);
     border: 0;
     padding: 0;
+    cursor: pointer;
 }
 
 .left-sidebar i:hover {
@@ -82,6 +83,15 @@ body {
     background-color: rgba(10, 10, 10, 0.363);
     backdrop-filter: blur(25px);
     border: 0 ;
+    cursor: pointer;
+ }
+
+ .header-left :nth-child(1) {
+    border-left: 1px solid #403f3f;
+ }
+ .header-left :nth-child(3) {
+    border-right: 1px solid #403f3f;
+    width: 263px;
  }
 
  .header-left button:hover  {
@@ -240,11 +250,13 @@ body {
 
 .post1-interaction-buttons {
     display: flex;
+    cursor: pointer;
     
 }
 
 .post1-interaction-buttons button i {
     font-size: 14px;
+    cursor: pointer;
     
 }
 
@@ -285,9 +297,72 @@ body {
 }
 
 
+.post2 {
+    display: flex;
+    margin-left: 100px;
+    color: white;
+    padding: 18px;
+    border: 1px solid #403f3f;
+}
+.post2-prof-photo {
+    width: 51px;
+    border-radius: 30px;
+    margin-right: 18px;
+    height: 52px;
+}
+
+
+.post2-details {
+    display: flex;
+    flex: 10;
+    
+    flex-direction: column;
+}
+
+.post2-details-row1 {
+    display: flex;
+    align-items: center;
+    height: 24px;
+   
+}
+
+
+.post2-details-row1-left {
+    display: flex;
+    align-items: center;
+    flex: 9;
+}
+ 
+.post2-prof-photo {
+    width: 51px;
+    border-radius: 30px;
+    margin-right: 18px;
+    height: 52px;
+}
+
+
+.post2-details-row1 button {
+    flex: 0;
+    margin: 13px 2px;
+    background: black;
+    color: white;
+}
+
+.post2-main-photo {
+    aspect-ratio: 4 / 5;
+    width: 646px;
+    height: 558px;
+    margin-top: 18px;
+    border-radius: 15px;
+}
+
+
+
+
 
 .twit-options-send-button {
     display: flex;
+    cursor: pointer;
   
 }
 
@@ -322,6 +397,7 @@ body {
     padding: 10px 22px;
     border-radius: 19px;
     border: 0;
+    cursor: pointer;
 }
 
 
@@ -409,6 +485,7 @@ body {
     margin: 13px 2px;
     background: black;
     color: white;
+    cursor: pointer;
 }
 
 .topics1-row1 p,
@@ -431,6 +508,7 @@ body {
     border-radius: 19px;
     font-size: 16px;
     border: 0;
+    cursor: pointer;
     }
 
     .twit-create-options  :nth-child(2),
@@ -445,7 +523,7 @@ body {
     flex-direction: column;
     margin: 25px;
     margin-right: 66px;
-    border: 1px solid gray;
+    border: 1px solid #403f3f;
     border-radius: 22px;
     gap: 19px;
     
@@ -514,9 +592,28 @@ body {
 .follow-advice :nth-child(5) ,
 .topics-to-be-discussed :nth-child(7) {
    color:  rgb(29, 155, 240);
+   background: black;
+   cursor: pointer;
 }
 
+.footer button {
+    background: black;
+    color: gray;
+    cursor: pointer;
+}
 
+.footer button:hover {
+   text-decoration: dashed;
+}
+
+.footer {
+    width: 320px;
+    margin: 23px;
+}
+
+.footer p {
+    color: gray;
+}
 
 
 /*
