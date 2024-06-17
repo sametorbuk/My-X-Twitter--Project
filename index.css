@@ -981,22 +981,16 @@ samet
         top: 2px;
     }
     
-    .twitter-tweet {
+    .twitter-tweet  {
         display: flex;
-    max-width: 19rem;
-    width: 90%;
-    margin-top: 0rem;
-    margin-bottom: 1rem;
-    }
+        max-width: 10rem;
+       width: 70%;
+        margin-top: 0rem;
+        margin-bottom: 1rem;
+   
+}
 
-
-
-
-
-
-
-
-    .mobile-bottom-menu {
+.mobile-bottom-menu {
         display: flex;
         position: fixed;
         bottom: 0.01rem;
@@ -1017,6 +1011,15 @@ samet
         padding: 0.1rem 1.3rem;
     }
      
+
+    #twitter-widget-0 {
+        position: static;
+    visibility: visible;
+    width: 19rem;
+    height: 22rem;
+    display: block;
+    flex-grow: 1;
+    }
    
 
 
