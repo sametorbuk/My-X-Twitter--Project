@@ -531,10 +531,10 @@ body {
 
 .twitter-tweet {
     display: flex;
-    max-width: 662px;
-    width: 137%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    max-width: 44rem;
+    width: 146%;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
 }
 
 
