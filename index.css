@@ -557,13 +557,6 @@ body {
     flex: 4;
 }
 
-
-
-
-
-
-
-
 .membership-advice {
     border: 1px solid #403f3f;
     margin-top: 28px;
@@ -677,6 +670,18 @@ body {
 .topics5-row1 p ,
 .topics6-row1 p  {
     flex: 44 ;
+    color: gray;
+}
+
+.topics1 :nth-child(3),
+.topics2 :nth-child(3),
+.topics3 :nth-child(3),
+.topics4 :nth-child(3),
+.topics5 :nth-child(3),
+.topics6 :nth-child(3) {
+   
+    color: gray
+    
 }
 
 
@@ -1021,6 +1026,13 @@ samet
     flex-grow: 1;
     }
    
+
+
+}
+
+
+
+@media (orientation: landscape) and (max-width: 768px)  {
 
 
 }
