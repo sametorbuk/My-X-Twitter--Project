@@ -36,11 +36,13 @@ body {
 
 .left-sidebar i {
     color: white;
-    font-size: 23px;
+    font-size: 27px;
     margin-right: 21px;
     
    
 }
+
+
 
 
 
@@ -684,7 +686,13 @@ body {
     
 }
 
+.left-sidebar :nth-child(9) i {
+    color: white;
+    border: 3px solid white;
+    border-radius: 15px;
+    background: black;
 
+}
 
 
 .send-button {
@@ -781,6 +789,7 @@ body {
    color:  rgb(29, 155, 240);
    background: black;
    cursor: pointer;
+   margin-bottom: 0.7rem;
 }
 
 .footer button {
