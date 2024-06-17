@@ -818,6 +818,7 @@ samet
     background: black;
     color: white;
     position: relative;
+    
    
     }
 
@@ -871,7 +872,7 @@ samet
 
     .mobile-bottom-menu button {
         background: black;
-        
+        padding: 0.1rem 1.3rem;
     }
      
    
