@@ -10,6 +10,10 @@ body {
    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.mobile-bottom-menu {
+    display: none;
+}
+
 
 
 
@@ -403,8 +407,8 @@ body {
     display: flex;
     color: white;
     background: black;
-    padding: 14px 6px;
-    margin-top: 585px;
+    padding: 21px 6px;
+    margin-top: 516px;
     border: 1px solid gray;
     width: 360px;
     position: fixed;
@@ -417,11 +421,20 @@ body {
 .message-box-left {
     flex: 12;
     text-align: left;
+    font-size: 20px;
+    position: relative;
+    bottom: 10px;
 }
 
 .message-box-right {
     display: flex;
     gap: 17px;
+}
+
+.message-box-right i {
+    font-size: 20px;
+    position: relative;
+    bottom: 7px;
 }
 
 .message-box-right :nth-child(2) {
@@ -693,3 +706,176 @@ body {
 /*
 samet
 */
+
+@media (max-width: 768px) {
+
+    .twit-create {
+        display: none;
+    }
+
+    .header-right {
+        display: none;
+    }
+
+    .right-advice {
+        display: none;
+    }
+  
+    .left-sidebar :nth-child(2) ,
+    .left-sidebar :nth-child(3),
+    .left-sidebar :nth-child(4),
+    .left-sidebar :nth-child(5),
+    .left-sidebar :nth-child(6),
+    .left-sidebar :nth-child(7),
+    .left-sidebar :nth-child(8),
+    .left-sidebar :nth-child(9) {
+        display: none;
+    }
+
+    body {
+        display: flex;
+      flex-direction: column;
+      font-size: x-small;
+    }
+
+    header {
+        position: static;
+        margin-left: 0;
+    }
+
+    .header-left {
+        width: 24rem ;
+    }
+
+    .main-content {
+        margin-left: 0 ;
+    }
+
+    .left-sidebar {
+        position: static;
+        margin-right: 6rem;
+        flex-direction: row;
+        margin-left: 0;
+        overflow-y: hidden;
+        margin-bottom: 1rem ;
+    }
+
+    .left-sidebar img {
+        order: -1;
+        width: 2rem;
+    }
+
+    .left-sidebar :nth-child(1) {
+        position: relative;
+        left: 6rem;
+       font-size: 2rem;
+    }
+
+    .header-left button {
+        width: 8rem;
+        padding: 8px;
+        font-size: x-small;
+    }
+
+    .header-left :nth-child(3) {
+       width: 7.9rem;
+    }
+
+    .post1 {
+        margin-left: 0 ;
+        padding: 0;
+    }
+
+    .post1-prof-photo {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 0.4rem;
+    }
+
+    .post1-main-photo {
+        width: 17rem;
+        height: 14rem;
+        margin-left: 1rem;
+    }
+
+    .post1-interaction-buttons {
+        width: 21rem;
+    }
+ 
+    .post1-interaction-buttons button i {
+        font-size: 0.6rem;
+    }
+     
+    .post1-interaction-buttons-right :nth-child(1) ,
+    .post1-interaction-buttons-right :nth-child(2) {
+        left: 0 ;
+        font-size: 0.7rem;
+        top: 2px;
+    }
+
+    .post1-details-row1 button {
+       
+    background: black;
+    color: white;
+    position: relative;
+   
+    }
+
+    .post2 {
+        margin-left: 0 ;
+        padding: 0;
+    }
+
+    .post2-prof-photo {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 0.4rem;
+    }
+
+    .post2-main-photo {
+        width: 17rem;
+        height: 14rem;
+        margin-left: 1rem;
+    }
+
+    .post2-interaction-buttons {
+        width: 21rem;
+    }
+ 
+    .post2-interaction-buttons button i {
+        font-size: 0.6rem;
+    }
+     
+    .post2-interaction-buttons-right :nth-child(1) ,
+    .post2-interaction-buttons-right :nth-child(2) {
+        left: 0 ;
+        font-size: 0.7rem;
+        top: 2px;
+    }
+
+    .mobile-bottom-menu {
+        display: flex;
+        position: fixed;
+        bottom: 0.01rem;
+        width: 24rem;
+        justify-content: space-evenly;
+        background: black;
+    }
+
+    .mobile-bottom-menu button i {
+        font-size: 1rem;
+        font-size: 1.5rem;
+        color: white;
+        background: rgb(0, 0, 0);
+    }
+
+    .mobile-bottom-menu button {
+        background: black;
+        
+    }
+     
+   
+
+
+}
+
