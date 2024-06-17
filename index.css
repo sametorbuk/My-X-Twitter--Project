@@ -92,6 +92,7 @@ body {
  .header-left :nth-child(3) {
     border-right: 1px solid #403f3f;
     width: 263px;
+    
  }
 
  .header-left button:hover  {
@@ -355,6 +356,51 @@ body {
     margin-top: 18px;
     border-radius: 15px;
 }
+
+
+
+.post2-interaction-buttons {
+    display: flex;
+}
+
+.post2-interaction-buttons-left {
+    display: flex;
+    flex: 3 ;
+    justify-content: space-between;
+
+}
+ .post2-interaction-buttons-left button {
+    background: black;
+    color: rgba(227, 224, 224, 0.534);
+}
+
+.post2-interaction-buttons-right button {
+    background: black;
+    color: rgba(227, 224, 224, 0.534);
+}
+
+
+
+ .post2-interaction-buttons-right {
+    flex: 1;
+    
+}
+
+.post2-interaction-buttons-right :nth-child(2) {
+   position: relative;
+   left: 70px ;
+
+}
+
+.post2-interaction-buttons-right :nth-child(1) {
+   position: relative;
+   left: 33px ;
+   font-size: medium;
+}
+
+
+
+
 
 
 
