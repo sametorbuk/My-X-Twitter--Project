@@ -402,6 +402,94 @@ body {
    font-size: medium;
 }
 
+.post3-prof-photo {
+    width: 51px;
+    border-radius: 30px;
+    margin-right: 18px;
+    height: 52px;
+}
+
+.post3 {
+    display: flex;
+    margin-left: 100px;
+    color: white;
+    padding: 18px;
+    border: 1px solid #403f3f;
+}
+
+.post3-details {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.post3-details-row1 {
+    display: flex;
+    align-items: center;
+    height: 24px;
+   
+}
+
+
+.post3-details-row1-left {
+    display: flex;
+    align-items: center;
+    flex: 9;
+}
+
+.post3-details-row1 button {
+    flex: 0;
+    margin: 13px 2px;
+    background: black;
+    color: white;
+}
+
+.post3-interaction-buttons {
+    display: flex;
+}
+
+.post3-interaction-buttons-left {
+    display: flex;
+    flex: 3 ;
+    justify-content: space-between;
+
+}
+ .post3-interaction-buttons-left button {
+    background: black;
+    color: rgba(227, 224, 224, 0.534);
+}
+
+.post3-interaction-buttons-right button {
+    background: black;
+    color: rgba(227, 224, 224, 0.534);
+}
+
+
+
+ .post3-interaction-buttons-right {
+    flex: 1;
+    
+}
+
+.post3-interaction-buttons-right :nth-child(2) {
+   position: relative;
+   left: 70px ;
+
+}
+
+.post3-interaction-buttons-right :nth-child(1) {
+   position: relative;
+   left: 33px ;
+   font-size: medium;
+}
+
+
+
+
+
+
+
+
 
 .message-box {
     display: flex;
@@ -441,6 +529,13 @@ body {
     color: white;
 }
 
+.twitter-tweet {
+    display: flex;
+    max-width: 662px;
+    width: 137%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
 
 
@@ -853,6 +948,53 @@ samet
         font-size: 0.7rem;
         top: 2px;
     }
+
+    .post3 {
+        margin-left: 0 ;
+        padding: 0;
+    }
+
+    .post3-prof-photo {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 0.4rem;
+    }
+
+    .post3-main-photo {
+        width: 17rem;
+        height: 14rem;
+        margin-left: 1rem;
+    }
+
+    .post3-interaction-buttons {
+        width: 21rem;
+    }
+ 
+    .post3-interaction-buttons button i {
+        font-size: 0.6rem;
+    }
+     
+    .post3-interaction-buttons-right :nth-child(1) ,
+    .post3-interaction-buttons-right :nth-child(2) {
+        left: 0 ;
+        font-size: 0.7rem;
+        top: 2px;
+    }
+    
+    .twitter-tweet {
+        display: flex;
+    max-width: 19rem;
+    width: 90%;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    }
+
+
+
+
+
+
+
 
     .mobile-bottom-menu {
         display: flex;
