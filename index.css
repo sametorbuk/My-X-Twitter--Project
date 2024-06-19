@@ -502,10 +502,18 @@ body {
     border: 1px solid gray;
     width: 360px;
     position: fixed;
-    
+    flex-direction: column;
+    height: 17rem ;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+   gap: 0.5rem;
 }
+
+
+.message-box-header {
+    display: flex;
+}
+
 
 
 .message-box-left {
@@ -519,6 +527,7 @@ body {
 .message-box-right {
     display: flex;
     gap: 17px;
+    margin-left: 13rem ;
 }
 
 .message-box-right i {
@@ -530,6 +539,64 @@ body {
 .message-box-right :nth-child(2) {
     color: white;
 }
+
+
+.message-box-friend1 ,
+.message-box-friend2 {
+    display: flex;
+    width: 22rem;
+}
+
+.message-box-friend1:hover ,
+.message-box-friend2:hover {
+    background: #8080804a;;
+}
+
+
+
+.message-box-friend1-prof-info ,
+.message-box-friend2-prof-info {
+    
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.5rem;
+    margin-left: 0.5rem;
+    color: #767272;
+}
+
+.message-box-friend1-prof-info-row1 ,
+.message-box-friend2-prof-info-row1 {
+    display: flex;
+    gap: 0.2rem;
+}
+
+.message-box-friend1-prof-info-row1 :nth-child(1) ,
+.message-box-friend2-prof-info-row1 :nth-child(1) {
+  color: white
+}
+
+.message-box-friend1 img ,
+.message-box-friend2 img {
+    width: 51px;
+    border-radius: 30px;
+    margin-right: 0;
+    height: 52px;
+}
+
+.message-box-friend1-prof-info p ,
+.message-box-friend2-prof-info p {
+    margin: 0 ;
+    text-align: left;
+}
+
+
+.message-box:focus {
+    margin-top: 370px ;
+
+}
+
+
+
 
 .twitter-tweet {
     display: flex;
@@ -818,6 +885,10 @@ samet
 
 @media (max-width: 768px) {
 
+    .twit-tuy {
+        display: none;
+    }
+    
     .twit-create {
         display: none;
     }
