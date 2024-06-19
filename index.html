@@ -243,6 +243,38 @@
 
         </div>
      <section class="right-advice">
+      <div class="search-box-memory">
+        <div class="search-box-memory-header">
+          <h2>En Yeni</h2>
+          <button>Tümünü temizle</button>
+        </div>
+        <div class="search-box-memory1">
+          <img src="https://pbs.twimg.com/profile_images/1774013136888070144/Cd-kT_Cb_400x400.jpg" alt="">
+          <div class="search-box-memory1-info">
+            <h4>NO CONTEXT HUMANS</h4>
+            <p>@HumansNoContext</p>
+
+          </div>
+          <button>X</button>
+
+        </div>
+
+        <div class="search-box-memory2">
+          <img src="https://pbs.twimg.com/profile_images/1628290710142337025/57yQc4HM_400x400.jpg" alt="">
+          <div class="search-box-memory2-info">
+            <h4>Workintech</h4>
+            <p>Workintech2023</p>
+
+          </div>
+          <button>X</button>
+
+        </div>
+
+
+      </div>
+
+
+
           <div class="membership-advice">
             <h2>Premium'a Abone Ol</h2>
             <p>Yeni özellikleri açmak için abone ol ve uygun olman durumunda reklam geliri payı kazan</p>
@@ -389,6 +421,20 @@
          </div>
  
     </main>
+
+    <script>
+      const searchBox = document.querySelector('.search-box');
+      const searchBoxMemory = document.querySelector('.search-box-memory');
+
+searchBox.addEventListener('focus', function() {
+  searchBoxMemory.style.display = 'flex';
+});
+
+searchBox.addEventListener('blur', function() {
+  searchBoxMemory.style.display = 'none';
+});
+
+    </script>
 
     
   </body>

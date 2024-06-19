@@ -128,9 +128,12 @@ body {
     background: #353535;
     color: white;
     border-radius: 30px;
-   
+    position: fixed;
     border: 0;
 }
+
+
+
 
 .input:focus {
     border-color: rgb(25, 124, 236);
@@ -138,9 +141,12 @@ body {
 }
 
 .header-right i {
+    
     position: relative;
     color: #989595e6;
-    right: 290px;
+    
+    left: 10px;
+    top: 7px;
 }
 
  
@@ -671,6 +677,89 @@ body {
     flex-direction: column;
     margin-left: 0
 
+}
+
+.search-box-memory {
+    display: none;
+}
+
+
+
+.search-box-memory {
+    border: 1px solid #403f3f ;
+    position: absolute;
+    top: 3rem;
+    left: 56rem;
+    width: 18rem;
+    height: 10rem;
+    
+    flex-direction: column;
+    background: black;
+    border-radius: 10px;
+}
+
+.search-box-memory-header {
+    display: flex;
+}
+
+.search-box-memory-header h2 {
+    flex: 1;
+    padding-left: 0.5rem;
+    margin: 0.5rem;
+}
+
+.search-box-memory-header button {
+    background-color: black;
+    color: rgb(29, 155, 240);
+}
+
+
+.search-box-memory1 ,
+.search-box-memory2 {
+    display: flex;
+}
+
+
+.search-box-memory1 button {
+    height: 1.5rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    background: black;
+    color: rgb(29, 155, 240);
+}
+
+.search-box-memory2 button {
+    height: 1.5rem;
+    margin-top: 1rem;
+    margin-left: 4.9rem;
+    background: black;
+    color: rgb(29, 155, 240);
+}
+
+.search-box-memory1-info ,
+.search-box-memory1-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-box-memory1-info p ,
+.search-box-memory2-info p {
+    margin: 0;
+}
+
+
+.search-box-memory1-info h4 ,
+.search-box-memory2-info h4 {
+    margin: 0;
+}
+
+
+.search-box-memory1 img ,
+.search-box-memory2 img {
+    width: 51px;
+    border-radius: 30px;
+    
+    height: 52px;
 }
 
 .topics-to-be-discussed {
