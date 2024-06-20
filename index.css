@@ -606,10 +606,10 @@ body {
 
 .twitter-tweet {
     display: flex;
-    max-width: 44rem;
-    width: 146%;
-    margin-top: 0rem;
-    margin-bottom: 1rem;
+    max-width: 294px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 
