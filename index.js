@@ -371,8 +371,8 @@ document.addEventListener("click" , (event) => {
   const secondChild = centerContent.children[1]
   centerContent.insertBefore(newTwit , secondChild)
 
-  newTwit.style.background = "white"
-  newTwit.style.height = "10rem"
+  newTwit.style.background = "black"
+  newTwit.style.height = "7rem"
   newTwit.style.width = "47.4rem"
   newTwit.style.marginLeft = "6.2rem"
 
@@ -384,3 +384,92 @@ document.addEventListener("click" , (event) => {
   newTwit.appendChild(img)
   img.classList.add("new-twit-prof-photo")
 
+  const twitDetails = document.createElement("div")
+  twitDetails.style.display = "flex"
+  twitDetails.style.flexDirection = "column"
+  newTwit.appendChild(twitDetails)
+
+  const twitDetailsRow1 = document.createElement("button")
+  twitDetails.appendChild(twitDetailsRow1)
+  twitDetailsRow1.textContent = "Samet"
+  twitDetailsRow1.style.background = "black"
+  twitDetailsRow1.style.color = "white"
+  twitDetailsRow1.fontSize = "large"
+
+  twitDetailsRow1.style.display = "flex"
+
+  const row1UserName = document.createElement("p")
+  row1UserName.textContent = "@orbukk"
+  row1UserName.style.color = "gray"
+  row1UserName.style.marginTop = "0"
+  row1UserName.style.marginLeft = "0.5rem"
+
+
+  twitDetailsRow1.appendChild(row1UserName)
+
+
+
+
+
+const row1TodaysDate = document.createElement("p")
+const today = new Date();
+row1TodaysDate.textContent = today.toDateString();
+twitDetailsRow1.appendChild(row1TodaysDate)
+row1TodaysDate.style.marginLeft = "1rem"
+row1TodaysDate.style.marginTop = "0"
+
+const row1MoreButton = document.createElement("button")
+row1MoreButton.textContent = "..."
+twitDetailsRow1.appendChild(row1MoreButton)
+row1MoreButton.style.marginLeft = "27rem"
+row1MoreButton.style.color = "white"
+row1MoreButton.style.background= "black"
+
+const twit = document.createElement("p")
+twit.textContent = "Hello world"
+twit.style.color = "white"
+twitDetails.appendChild(twit)
+twit.style.marginBottom = "2rem"
+
+const interactionButtons = document.createElement("div")
+interactionButtons.style.background = "black"
+twitDetails.appendChild(interactionButtons)
+interactionButtons.style.width = "43rem"
+interactionButtons.style.height = "2rem"
+interactionButtons.style.display = "flex"
+interactionButtons.style.gap = "9rem"
+
+const commentBtn = document.createElement("i")
+commentBtn.classList.add("far","fa-comment")
+commentBtn.style.color = "gray"
+const retweetBtn = document.createElement("i")
+retweetBtn.classList.add("fas","fa-retweet")
+retweetBtn.style.color = "gray"
+const likeBtn = document.createElement("i")
+likeBtn.classList.add("far","fa-heart")
+likeBtn.style.color = "gray"
+const statisticsBtn = document.createElement("i")
+statisticsBtn.classList.add("fas","fa-chart-simple")
+statisticsBtn.style.color = "gray"
+
+interactionButtons.appendChild(commentBtn)
+interactionButtons.appendChild(retweetBtn)
+interactionButtons.appendChild(likeBtn)
+interactionButtons.appendChild(statisticsBtn)
+
+
+const interactionButtonsRight = document.createElement("div")
+interactionButtons.appendChild(interactionButtonsRight)
+const bookmarkicon = document.createElement("i")
+bookmarkicon.classList.add("far" , "fa-bookmark")
+bookmarkicon.style.color = "gray"
+
+
+interactionButtonsRight.appendChild(bookmarkicon)
+
+const sharebuttons = document.createElement("i")
+sharebuttons.classList.add("fas" , "fa-arrow-up-from-bracket")
+sharebuttons.style.color = "gray"
+
+interactionButtonsRight.appendChild(sharebuttons)
+sharebuttons.style.marginLeft = "1rem"
