@@ -365,6 +365,12 @@ document.addEventListener("click" , (event) => {
 
 
   
+
+  
+  
+const tweetCreateFunc = (input) => {
+
+
   const newTwit = document.createElement("div")
 
   const centerContent = document.querySelector(".center-content")
@@ -407,10 +413,6 @@ document.addEventListener("click" , (event) => {
 
   twitDetailsRow1.appendChild(row1UserName)
 
-
-
-
-
 const row1TodaysDate = document.createElement("p")
 const today = new Date();
 row1TodaysDate.textContent = today.toDateString();
@@ -424,9 +426,16 @@ twitDetailsRow1.appendChild(row1MoreButton)
 row1MoreButton.style.marginLeft = "27rem"
 row1MoreButton.style.color = "white"
 row1MoreButton.style.background= "black"
+row1MoreButton.classList.add("more-button")
+
+row1MoreButton.addEventListener("click" , (event) => {
+  
+})
+
+
 
 const twit = document.createElement("p")
-twit.textContent = "Hello world"
+twit.textContent = input
 twit.style.color = "white"
 twitDetails.appendChild(twit)
 twit.style.marginBottom = "2rem"
@@ -473,3 +482,131 @@ sharebuttons.style.color = "gray"
 
 interactionButtonsRight.appendChild(sharebuttons)
 sharebuttons.style.marginLeft = "1rem"
+
+return newTwit;
+
+}
+
+sendBtn.addEventListener("click" , (event) => {
+
+  tweetCreateFunc(twitCreateİnput.value)
+})
+
+
+const featerTwitCreate = document.querySelector(".twit-tuy")
+
+
+const twitCreateScreen = document.createElement("div")
+twitCreateScreen.classList.add("twit-create-screen")
+twitCreateScreen.style.display = "none"
+twitCreateScreen.style.flexDirection = "column"
+body.appendChild(twitCreateScreen)
+
+const twitCreateScreenTop = document.createElement("div")
+twitCreateScreenTop.style.display ="flex"
+twitCreateScreenTop.style.marginTop = "1rem"
+
+twitCreateScreen.appendChild(twitCreateScreenTop)
+
+
+const twitCreateScreenTopCloseBtn = document.createElement("button")
+twitCreateScreenTopCloseBtn.textContent = "X"
+twitCreateScreenTop.appendChild(twitCreateScreenTopCloseBtn)
+twitCreateScreenTopCloseBtn.style.color ="white"
+twitCreateScreenTopCloseBtn.style.width = "1rem"
+twitCreateScreenTopCloseBtn.style.background = "black"
+twitCreateScreenTopCloseBtn.style.marginLeft = "1rem"
+
+const btn = document.createElement("button")
+btn.textContent = "Taslaklar"
+twitCreateScreenTop.appendChild(btn)
+btn.style.marginLeft = "28rem"
+btn.style.color = "rgb(29, 155, 240)"
+btn.style.background = "black"
+
+const twitCreateScreenInputArea = document.createElement("div")
+
+const twitCreateScreenProfPhoto = document.createElement("img")
+twitCreateScreenProfPhoto.src = "https://pbs.twimg.com/profile_images/1762074719711268864/sSVFPxAt_400x400.jpg"
+twitCreateScreenInputArea.appendChild(twitCreateScreenProfPhoto)
+twitCreateScreen.appendChild(twitCreateScreenInputArea)
+twitCreateScreenProfPhoto.classList.add("twit-create-screen-prof-photo")
+
+const inputArea = document.createElement("input")
+twitCreateScreenInputArea.appendChild(inputArea)
+inputArea.type = "text"
+inputArea.placeholder = "Neler oluyor?"
+inputArea.classList.add("twit-screen-input")
+
+const twitCreateScreenPrivacyOptions = document.createElement("button")
+twitCreateScreenPrivacyOptions.textContent = "Sadece bashettiklerin yanıtlayabilir"
+twitCreateScreenPrivacyOptions.style.color = "rgb(29, 155, 240)"
+twitCreateScreenPrivacyOptions.style.background = "black"
+twitCreateScreen.appendChild(twitCreateScreenPrivacyOptions)
+twitCreateScreenPrivacyOptions.style.marginTop = "7rem"
+twitCreateScreenPrivacyOptions.style.width = "17rem" 
+
+
+
+const twitCreateScreenBottom = document.createElement("div")
+twitCreateScreenBottom.style.display = "flex"
+twitCreateScreenBottom.style.height = "3rem"
+twitCreateScreenBottom.style.background = "black"
+twitCreateScreenBottom.style.gap = "3rem"
+twitCreateScreenBottom.style.borderTop = "1px solid gray"
+twitCreateScreenBottom.style.paddingTop = "1rem"
+
+const twitCreateScreenBottomIcon1 = document.createElement("i")
+twitCreateScreenBottomIcon1.classList.add("fas" ,"fa-image")
+twitCreateScreenBottomIcon1.style.color = "rgb(29, 155, 240)"
+twitCreateScreenBottomIcon1.style.marginLeft = "2.1rem"
+twitCreateScreenBottom.appendChild(twitCreateScreenBottomIcon1)
+const twitCreateScreenBottomIcon2 = document.createElement("i")
+twitCreateScreenBottomIcon2.classList.add("fas","fa-square-poll-vertical")
+twitCreateScreenBottomIcon2.style.color = "rgb(29, 155, 240)"
+twitCreateScreenBottom.appendChild(twitCreateScreenBottomIcon2)
+const twitCreateScreenBottomIcon3 = document.createElement("i")
+twitCreateScreenBottomIcon3.classList.add("far","fa-face-smile")
+twitCreateScreenBottomIcon3.style.color = "rgb(29, 155, 240)"
+twitCreateScreenBottom.appendChild(twitCreateScreenBottomIcon3)
+const twitCreateScreenBottomIcon4 = document.createElement("i")
+twitCreateScreenBottomIcon4.classList.add("fas","fa-calendar-days")
+twitCreateScreenBottomIcon4.style.color = "rgb(29, 155, 240)"
+twitCreateScreenBottom.appendChild(twitCreateScreenBottomIcon4)
+const twitCreateScreenBottomIcon5 = document.createElement("i")
+twitCreateScreenBottomIcon5.classList.add("fas","fa-location-dot")
+twitCreateScreenBottomIcon5.style.color = "rgb(29, 155, 240)"
+twitCreateScreenBottom.appendChild(twitCreateScreenBottomIcon5)
+
+const twitCreateScreensumbit = document.createElement("button")
+twitCreateScreensumbit.textContent = "Gönder"
+twitCreateScreensumbit.style.background = "rgb(29, 155, 240)"
+twitCreateScreensumbit.style.fontWeight = "bold"
+twitCreateScreensumbit.style.color = "white"
+twitCreateScreensumbit.classList.add("twit-create-sumbit")
+
+twitCreateScreenBottom.appendChild(twitCreateScreensumbit)
+
+
+twitCreateScreen.appendChild(twitCreateScreenBottom)
+
+
+featerTwitCreate.addEventListener(("click") , (event) => {
+  twitCreateScreen.style.display = "flex"
+})
+
+twitCreateScreenTopCloseBtn.addEventListener(("click") , (event) =>{
+    twitCreateScreen.style.display = "none"
+})
+
+
+document.addEventListener(("click") , (event) => {
+  if(event.target === featerTwitCreate || twitCreateScreen.contains(event.target)) {
+    return ;
+  }
+
+  twitCreateScreen.style.display = "none"
+
+})
+
+
