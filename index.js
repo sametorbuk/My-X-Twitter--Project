@@ -252,8 +252,9 @@ subscriberScreenSubscribeBtn.addEventListener("click" , (event) => {
 
 const twitCreateİnput = document.getElementById("twit-create-input")
 const sendBtn = document.getElementsByClassName("send-button")[0]
-twitCreateİnput.addEventListener("input" , (event) => {
 
+
+twitCreateİnput.addEventListener("input" , (event) => {
 if(twitCreateİnput.value !== "") {
  sendBtn.removeAttribute("disabled")
  sendBtn.style.backgroundColor = "rgb(12 157 255 / 92%)"
@@ -262,7 +263,6 @@ if(twitCreateİnput.value !== "") {
   sendBtn.setAttribute("disabled" , "true")
   sendBtn.style.backgroundColor = "rgb(29 155 240 / 47%)"
 }
-
 })
 
 
@@ -429,7 +429,7 @@ row1MoreButton.style.background= "black"
 row1MoreButton.classList.add("more-button")
 
 row1MoreButton.addEventListener("click" , (event) => {
-  
+   
 })
 
 
@@ -490,6 +490,7 @@ return newTwit;
 sendBtn.addEventListener("click" , (event) => {
 
   tweetCreateFunc(twitCreateİnput.value)
+  twitCreateİnput.value = ""
 })
 
 
@@ -587,6 +588,22 @@ twitCreateScreensumbit.classList.add("twit-create-sumbit")
 
 twitCreateScreenBottom.appendChild(twitCreateScreensumbit)
 
+inputArea.addEventListener("input" , (event) => {
+  if(inputArea.value !== "") {
+   twitCreateScreensumbit.removeAttribute("disabled")
+   twitCreateScreensumbit.style.backgroundColor = "rgb(12 157 255 / 92%)"
+   twitCreateScreensumbit.style.color = "white"
+  } else {
+    twitCreateScreensumbit.setAttribute("disabled" , "true")
+    twitCreateScreensumbit.style.backgroundColor = "rgb(29 155 240 / 47%)"
+  }
+  })
+
+twitCreateScreensumbit.addEventListener("click" , (event) => {
+    tweetCreateFunc(inputArea.value)
+    inputArea.value = ""
+})
+
 
 twitCreateScreen.appendChild(twitCreateScreenBottom)
 
@@ -608,5 +625,7 @@ document.addEventListener(("click") , (event) => {
   twitCreateScreen.style.display = "none"
 
 })
+
+
 
 
