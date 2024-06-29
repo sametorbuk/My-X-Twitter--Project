@@ -492,9 +492,46 @@ body {
 }
 
 
+.white-subscribe-btn {
+    width: 27rem;
+    height: 4rem;
+    margin-left: 6.5rem;
+    margin-top: 1rem;
+    border-radius: 32px;
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.subscribe-info {
+    display: flex;
+    gap: 0 ;
+    height: 4rem;
+    cursor: pointer;
+    align-items: center;
+}
+
+.more-info-premium-btn {
+    width: 6rem;
+    height: 1rem;
+    margin-top: 0.2rem;
+    color: rgb(58 141 242);
+    padding-left: 0;
+    background: black;
+    text-decoration: solid;
+    cursor: pointer;
+}
 
 
-
+.more-info-premium-btn2 {
+    margin: 0;
+    color: rgb(58 141 242);
+    padding-left: 0;
+    background: black;
+    text-decoration: solid;
+    margin-top: 0.2rem;
+    cursor: pointer;
+}
 
 
 
