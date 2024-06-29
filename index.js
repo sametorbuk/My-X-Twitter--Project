@@ -95,6 +95,14 @@ subscriberScreenOptionsDivLeft.style.flexDirection = "column"
 subscriberScreenOptionsDivLeft.style.border = "1px solid gray"
 subscriberScreenOptionsDivLeft.style.borderRadius = "1rem"
 
+document.addEventListener("click" , (event) => {
+  if(event.target === subscribebtn || subscriberScreen.contains(event.target)) {
+    return ;
+  }
+
+  subscriberScreen.style.display = "none"
+})
+
 
 
 const subscriberScreenOptionsDivLeftp1 = document.createElement("p")
@@ -240,3 +248,139 @@ moreInfoAcceptEstablishmentBtn.addEventListener("click" , (event) => {
 subscriberScreenSubscribeBtn.addEventListener("click" , (event) => {
   window.open("https://x.com/i/premium_sign_up" , "_blank")
 })
+
+
+const twitCreateİnput = document.getElementById("twit-create-input")
+const sendBtn = document.getElementsByClassName("send-button")[0]
+twitCreateİnput.addEventListener("input" , (event) => {
+
+if(twitCreateİnput.value !== "") {
+ sendBtn.removeAttribute("disabled")
+ sendBtn.style.backgroundColor = "rgb(12 157 255 / 92%)"
+ sendBtn.style.color = "white"
+} else {
+  sendBtn.setAttribute("disabled" , "true")
+  sendBtn.style.backgroundColor = "rgb(29 155 240 / 47%)"
+}
+
+})
+
+
+const twitCreatePrivacyBtn = document.getElementById("twit-create-privacy-options")
+const twitPrivacyArea = document.createElement("div")
+body.appendChild(twitPrivacyArea)
+twitPrivacyArea.style.height = "20rem"
+twitPrivacyArea.classList.add("twit-privacy-area")
+
+
+const twitPrivacyAreap1 = document.createElement("p")
+twitPrivacyAreap1.textContent = "Kimler yanıtlayabilir?"
+twitPrivacyAreap1.style.fontWeight = "bold"
+
+twitPrivacyArea.appendChild(twitPrivacyAreap1)
+
+const twitPrivacyAreap2 = document.createElement("p")
+twitPrivacyAreap2.textContent= "Bu gönderiyi kimlerin yanıtlayabileceğini seç. Bahsedilen herkes yanıt verebilir."
+twitPrivacyArea.appendChild(twitPrivacyAreap2)
+
+
+const btnCreate = (explain , iconClass , iconClasstwo) => {
+   
+  const btn = document.createElement("button")
+  twitPrivacyArea.appendChild(btn)
+  const btnp = document.createElement("p")
+  btnp.textContent = explain
+  btn.appendChild(btnp)
+  btnp.style.marginBottom = "0"
+  btnp.style.marginTop = "0.5rem"
+  btnp.style.marginLeft = "1rem"
+  btnp.style.whiteSpace = "nowrap"
+
+  const ico= document.createElement("i")
+  ico.classList.add('fa', ...iconClass.split(' '))
+  btn.appendChild(ico)
+  btn.style.color = "white"
+  btn.style.background = "black"
+
+  const tikIco = document.createElement("i")
+tikIco.classList.add('fa', ...iconClasstwo.split(' '))
+btn.appendChild(tikIco)
+tikIco.style.position = "fixed"
+tikIco.style.color = "rgb(13 148 239)"
+tikIco.style.marginLeft = "17rem"
+tikIco.style.marginTop = "0.5rem"
+
+  
+  ico.style.backgroundColor = "rgb(13 148 239)"
+  btn.style.display = "flex"
+  ico.style.order = "-1"
+  ico.style.fontSize = "xx-large"
+  ico.style.width = "3.3rem"
+  ico.style.height="2rem"
+  ico.style.borderRadius = "5px"
+
+  btn.style.marginBottom = "1rem"
+ tikIco.style.display = "none"
+
+ btn.addEventListener("click" , (e) => {
+  tikIco.style.display = "block"
+ })
+
+ document.addEventListener("click" , (event) => {
+  if(event.target === btn || btn.contains(event.target)) {
+     return ;
+  } 
+    tikIco.style.display = "none"
+  })
+
+  return btn
+}
+
+
+const twitPrivacyAreabtn1 = btnCreate("Herkese açık","fa-light fa-earth-americas" , "fa-solid fa-check")
+const twitPrivacyAreabtn2 = btnCreate("Takip ettiğin hesaplar","fa-light fa-user-check" , "fa-solid fa-check")
+const twitPrivacyAreabtn3 = btnCreate("Onaylanmış hesaplar","fa-regular fa-circle-check" , "fa-solid fa-check")
+const twitPrivacyAreabtn4 = btnCreate("Yalnızca bahsettiğin hesaplar","fa-solid fa-at" , "fa-solid fa-check")
+
+twitPrivacyArea.style.display = "none"
+
+
+twitCreatePrivacyBtn.addEventListener("click" , (event) => {
+   
+  twitPrivacyArea.style.display = "flex"
+
+})
+
+document.addEventListener("click" , (event) => {
+  if(event.target === twitCreatePrivacyBtn || twitPrivacyArea.contains(event.target)) {
+     return ;
+  } 
+    twitPrivacyArea.style.display = "none"
+  })
+
+
+  window.addEventListener("scroll" , (event) => {
+    twitPrivacyArea.style.display = "none"
+  })
+
+
+  
+  const newTwit = document.createElement("div")
+
+  const centerContent = document.querySelector(".center-content")
+  const secondChild = centerContent.children[1]
+  centerContent.insertBefore(newTwit , secondChild)
+
+  newTwit.style.background = "white"
+  newTwit.style.height = "10rem"
+  newTwit.style.width = "47.4rem"
+  newTwit.style.marginLeft = "6.2rem"
+
+  newTwit.style.display = "flex"
+  newTwit.classList.add("new-twit-container")
+  
+  const img = document.createElement("img")
+  img.src = "https://pbs.twimg.com/profile_images/1762074719711268864/sSVFPxAt_400x400.jpg"
+  newTwit.appendChild(img)
+  img.classList.add("new-twit-prof-photo")
+

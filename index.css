@@ -185,6 +185,38 @@ body {
     flex: 10 ;
 } 
 
+.new-twit-prof-photo {
+  
+    width: 51px;
+    border-radius: 30px;
+    margin-right: 18px;
+    height: 52px;
+}
+
+.new-twit-container {
+   
+    padding: 18px;
+    border: 1px solid #403f3f;
+
+}
+
+
+.twit-privacy-area {
+
+    position: fixed;
+    background: black;
+    color: white;
+    z-index: 1000;
+    height: 20rem;
+    width: 19rem;
+    top: 8rem;
+    display: flex;
+    flex-direction: column;
+     left: 10rem;
+     border-radius: 15px;
+   border: 1px solid rgba(220, 220, 220, 0.571);
+}
+
 .h3 {
     color: gray;
     font-weight: 200;
@@ -533,7 +565,12 @@ body {
     cursor: pointer;
 }
 
-
+.twit-create-input {
+    background-color: black;
+    border: none;
+    outline: none;
+    color: white;
+}
 
 
 .message-box {
