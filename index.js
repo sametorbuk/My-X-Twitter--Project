@@ -596,9 +596,12 @@ return newTwit;
 }
 
 sendBtn.addEventListener("click" , (event) => {
-
+  if(twitCreateİnput.value !== "") {
   tweetCreateFunc(twitCreateİnput.value)
   twitCreateİnput.value = ""
+} else {
+  return
+}
 })
 
 window.addEventListener("keydown" , (event) => {
