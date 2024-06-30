@@ -597,9 +597,10 @@ body {
     background: black;
     z-index: 1000;
     width: 35rem;
-    height: 19rem;
+    height: 15rem;
     left: 25rem;
-    top: 7rem;
+    top: 4rem;
+    border-radius: 15px;
 }
 
 .twit-create-screen-prof-photo {
@@ -616,7 +617,7 @@ body {
     width: 20rem;
     background: black;
     position: fixed;
-    top: 12rem;
+    top: 9rem;
     border: none;
     outline: none;
     color: white;
@@ -630,6 +631,45 @@ body {
     border-radius: 25px;
     height: 2rem;
 }
+
+
+.twit-custommization-area {
+   position: fixed;
+   flex-direction: column;
+   display: none;
+   z-index: 10001;
+    background-color: rgb(3, 0, 0);
+    width: 20rem;
+    height: 15rem;
+    left: 33rem;
+    top: 14rem;
+    border-radius: 20px;
+
+}
+
+.twit-customization-btn {
+    text-align: right;
+    display: flex;
+    font-weight: bold;
+    background-color: black;
+    color: rgb(201, 199, 199);
+    margin-top: 1rem;
+   
+   
+
+}
+
+.twit-custom-icon {
+    order: -1 ;
+    font-size: 1.5rem ;
+    margin-right: 1rem
+}
+
+
+
+
+
+
 
 .message-box-header {
     display: flex;
@@ -960,6 +1000,29 @@ body {
     background: black;
 
 }
+
+
+
+.twit-create-screen-options-area {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    z-index: 100001;
+    background-color: black;
+    width: 20rem;
+    height: 20rem;
+    left: 25rem;
+    top: 16rem;
+    border-radius: 20px;
+}
+
+
+#twit-create-screen-privacy-btn:hover {
+     text-decoration: underline;
+}
+
+
+
 
 
 .send-button {

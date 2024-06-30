@@ -420,6 +420,70 @@ twitDetailsRow1.appendChild(row1TodaysDate)
 row1TodaysDate.style.marginLeft = "1rem"
 row1TodaysDate.style.marginTop = "0"
 
+const twitCustomizatioArea = document.createElement("div")
+twitCustomizatioArea.classList.add("twit-custommization-area")
+
+
+body.appendChild(twitCustomizatioArea)
+
+const twitCustomizatioAreaBtn1 = document.createElement("button")
+twitCustomizatioAreaBtn1.textContent = "Sil"
+twitCustomizatioAreaBtn1.classList.add("twit-customization-btn")
+twitCustomizatioArea.appendChild(twitCustomizatioAreaBtn1)
+twitCustomizatioAreaBtn1.style.color = "#7a0000"
+
+const twitCustomizatioAreaBtn2 = document.createElement("button")
+twitCustomizatioAreaBtn2.textContent = "Profilden ayır"
+twitCustomizatioAreaBtn2.classList.add("twit-customization-btn")
+twitCustomizatioArea.appendChild(twitCustomizatioAreaBtn2)
+
+const twitCustomizatioAreaBtn3 = document.createElement("button")
+twitCustomizatioAreaBtn3.textContent = "Profilinde öne çıkar"
+twitCustomizatioAreaBtn3.classList.add("twit-customization-btn")
+twitCustomizatioArea.appendChild(twitCustomizatioAreaBtn3)
+
+const twitCustomizatioAreaBtn4 = document.createElement("button")
+twitCustomizatioAreaBtn4.textContent = "@orbuk kullanıcısının listelere ekle /kaldır"
+twitCustomizatioAreaBtn4.classList.add("twit-customization-btn")
+twitCustomizatioArea.appendChild(twitCustomizatioAreaBtn4)
+
+const twitCustomizatioAreaBtn5 = document.createElement("button")
+twitCustomizatioAreaBtn5.textContent = "Kimin yanıtlayabileceğini değiştir"
+twitCustomizatioAreaBtn5.classList.add("twit-customization-btn")
+twitCustomizatioArea.appendChild(twitCustomizatioAreaBtn5)
+
+
+
+const customBtn1Icon = document.createElement("i")
+customBtn1Icon.classList.add("fas" , "fa-trash")
+twitCustomizatioAreaBtn1.appendChild(customBtn1Icon)
+customBtn1Icon.classList.add("twit-custom-icon")
+customBtn1Icon.style.color = "#7a0000"
+
+
+
+const customBtn2Icon = document.createElement("i")
+customBtn2Icon.classList.add("fas","fa-thumbtack")
+twitCustomizatioAreaBtn2.appendChild(customBtn2Icon)
+customBtn2Icon.classList.add("twit-custom-icon")
+
+const customBtn3Icon = document.createElement("i")
+customBtn3Icon.classList.add("fas","fa-wand-magic-sparkles")
+twitCustomizatioAreaBtn3.appendChild(customBtn3Icon)
+customBtn3Icon.classList.add("twit-custom-icon")
+
+const customBtn4Icon = document.createElement("i")
+customBtn4Icon.classList.add("fas" , "fa-list-check")
+twitCustomizatioAreaBtn4.appendChild(customBtn4Icon)
+customBtn4Icon.classList.add("twit-custom-icon")
+
+
+const customBtn5Icon = document.createElement("i")
+customBtn5Icon.classList.add("far" , "fa-comment")
+twitCustomizatioAreaBtn5.appendChild(customBtn5Icon)
+customBtn5Icon.classList.add("twit-custom-icon")
+
+
 const row1MoreButton = document.createElement("button")
 row1MoreButton.textContent = "..."
 twitDetailsRow1.appendChild(row1MoreButton)
@@ -427,12 +491,34 @@ row1MoreButton.style.marginLeft = "27rem"
 row1MoreButton.style.color = "white"
 row1MoreButton.style.background= "black"
 row1MoreButton.classList.add("more-button")
+row1MoreButton.setAttribute("id" , "morebutton")
 
 row1MoreButton.addEventListener("click" , (event) => {
-   
+  twitCustomizatioArea.style.display = "flex"
+
+})
+
+document.addEventListener("click" , (event) => {
+  if(event.target === row1MoreButton) {
+
+    return ;
+  }
+
+  twitCustomizatioArea.style.display = "none"
 })
 
 
+window.addEventListener("scroll" , (event) => {
+ 
+  twitCustomizatioArea.style.display = "none"
+
+})
+
+
+twitCustomizatioAreaBtn1.addEventListener("click" , (event) => {
+
+  newTwit.remove();
+})
 
 const twit = document.createElement("p")
 twit.textContent = input
@@ -451,12 +537,29 @@ interactionButtons.style.gap = "9rem"
 const commentBtn = document.createElement("i")
 commentBtn.classList.add("far","fa-comment")
 commentBtn.style.color = "gray"
+
+
+
 const retweetBtn = document.createElement("i")
 retweetBtn.classList.add("fas","fa-retweet")
 retweetBtn.style.color = "gray"
+
+
 const likeBtn = document.createElement("i")
 likeBtn.classList.add("far","fa-heart")
 likeBtn.style.color = "gray"
+
+likeBtn.addEventListener("click" , (event) => {
+  if(likeBtn.textContent === "") {
+    likeBtn.textContent = "1"
+  } else {
+    likeBtn.textContent = ""
+  }
+})
+
+
+
+
 const statisticsBtn = document.createElement("i")
 statisticsBtn.classList.add("fas","fa-chart-simple")
 statisticsBtn.style.color = "gray"
@@ -465,6 +568,11 @@ interactionButtons.appendChild(commentBtn)
 interactionButtons.appendChild(retweetBtn)
 interactionButtons.appendChild(likeBtn)
 interactionButtons.appendChild(statisticsBtn)
+
+
+
+
+
 
 
 const interactionButtonsRight = document.createElement("div")
@@ -491,6 +599,18 @@ sendBtn.addEventListener("click" , (event) => {
 
   tweetCreateFunc(twitCreateİnput.value)
   twitCreateİnput.value = ""
+})
+
+window.addEventListener("keydown" , (event) => {
+  if(event.key === "Enter" && inputArea.value !== "") {
+    tweetCreateFunc(inputArea.value);
+    inputArea.value = ""
+  } else if (event.key === "Enter" && twitCreateİnput.value !== "") {
+   tweetCreateFunc(twitCreateİnput.value)
+   twitCreateİnput.value = ""
+  } else {
+    return;
+  }
 })
 
 
@@ -544,9 +664,118 @@ twitCreateScreenPrivacyOptions.textContent = "Sadece bashettiklerin yanıtlayabi
 twitCreateScreenPrivacyOptions.style.color = "rgb(29, 155, 240)"
 twitCreateScreenPrivacyOptions.style.background = "black"
 twitCreateScreen.appendChild(twitCreateScreenPrivacyOptions)
-twitCreateScreenPrivacyOptions.style.marginTop = "7rem"
+twitCreateScreenPrivacyOptions.style.marginTop = "3rem"
 twitCreateScreenPrivacyOptions.style.width = "17rem" 
+twitCreateScreenPrivacyOptions.setAttribute("id" , "twit-create-screen-privacy-btn")
 
+
+
+
+const twitCreateScreenOptionsArea = document.createElement("div")
+twitCreateScreenOptionsArea.classList.add("twit-create-screen-options-area")
+body.appendChild(twitCreateScreenOptionsArea) 
+
+
+const btnCreate2 = (explain , iconClass , iconClasstwo) => {
+   
+  const btn = document.createElement("button")
+  twitCreateScreenOptionsArea.appendChild(btn)
+  const btnp = document.createElement("p")
+  btnp.textContent = explain
+  btn.appendChild(btnp)
+  btnp.style.marginBottom = "0"
+  btnp.style.marginTop = "0.5rem"
+  btnp.style.marginLeft = "1rem"
+  btnp.style.whiteSpace = "nowrap"
+
+  const ico= document.createElement("i")
+  ico.classList.add('fa', ...iconClass.split(' '))
+  btn.appendChild(ico)
+  btn.style.color = "white"
+  btn.style.background = "black"
+
+  const tikIco = document.createElement("i")
+tikIco.classList.add('fa', ...iconClasstwo.split(' '))
+btn.appendChild(tikIco)
+tikIco.style.position = "fixed"
+tikIco.style.color = "rgb(13 148 239)"
+tikIco.style.marginLeft = "17rem"
+tikIco.style.marginTop = "0.5rem"
+
+  
+  ico.style.backgroundColor = "rgb(13 148 239)"
+  btn.style.display = "flex"
+  ico.style.order = "-1"
+  ico.style.fontSize = "xx-large"
+  ico.style.width = "3.3rem"
+  ico.style.height="2rem"
+  ico.style.borderRadius = "5px"
+
+  btn.style.marginBottom = "1rem"
+ tikIco.style.display = "none"
+
+ btn.addEventListener("click" , (e) => {
+  tikIco.style.display = "block"
+ })
+
+ document.addEventListener("click" , (event) => {
+  if(event.target === btn || btn.contains(event.target)) {
+     return ;
+  } 
+    tikIco.style.display = "none"
+  })
+
+  return btn
+}
+
+const twitCreateScreenOptionsAreap1 = document.createElement("p")
+twitCreateScreenOptionsAreap1.textContent = "Kimler yanıtlayabilir?"
+twitCreateScreenOptionsAreap1.style.fontWeight = "bold"
+twitCreateScreenOptionsAreap1.style.color = "white"
+
+twitCreateScreenOptionsArea.appendChild(twitCreateScreenOptionsAreap1)
+
+const twitCreateScreenOptionsAreap2 = document.createElement("p")
+twitCreateScreenOptionsAreap2.textContent= "Bu gönderiyi kimlerin yanıtlayabileceğini seç. Bahsedilen herkes yanıt verebilir."
+twitCreateScreenOptionsArea.appendChild(twitCreateScreenOptionsAreap2)
+twitCreateScreenOptionsAreap2.style.color = "white"
+
+const twitCreateScreenOptionsAreaBtn1 = btnCreate2("Herkese açık","fa-light fa-earth-americas" , "fa-solid fa-check")
+const twitCreateScreenOptionsAreaBtn2 = btnCreate2("Takip ettiğin hesaplar","fa-light fa-user-check" , "fa-solid fa-check")
+const twitCreateScreenOptionsAreaBtn3 = btnCreate2("Onaylanmış hesaplar","fa-regular fa-circle-check" , "fa-solid fa-check")
+const twitCreateScreenOptionsAreaBtn4 = btnCreate2("Yalnızca bahsettiğin hesaplar","fa-solid fa-at" , "fa-solid fa-check")
+
+
+twitCreateScreenOptionsAreaBtn1.addEventListener("click" , (event) => {
+  twitCreateScreenPrivacyOptions.textContent = "Herkes yanıtlayabilir"
+})
+
+twitCreateScreenOptionsAreaBtn2.addEventListener("click" , (event) => {
+  twitCreateScreenPrivacyOptions.textContent = "Takip ettiğin hesaplar yanıtlayabilir"
+})
+
+twitCreateScreenOptionsAreaBtn3.addEventListener("click" , (event) => {
+  twitCreateScreenPrivacyOptions.textContent = "Yalnızca onaylanmış hesaplar yanıtlayabilir"
+})
+
+twitCreateScreenOptionsAreaBtn4.addEventListener("click" , (event) => {
+  twitCreateScreenPrivacyOptions.textContent = "Yalnızca bahsettiğin hesaplar yanıtlayabilir"
+})
+
+
+
+
+twitCreateScreenPrivacyOptions.addEventListener("click" , (event) => {
+  twitCreateScreenOptionsArea.style.display = "flex"
+})
+
+
+document.addEventListener("click" , (event) => {
+  if(twitCreateScreenPrivacyOptions.contains(event.target)) {
+      return
+  }
+  twitCreateScreenOptionsArea.style.display = "none"
+})
 
 
 const twitCreateScreenBottom = document.createElement("div")
@@ -556,6 +785,8 @@ twitCreateScreenBottom.style.background = "black"
 twitCreateScreenBottom.style.gap = "3rem"
 twitCreateScreenBottom.style.borderTop = "1px solid gray"
 twitCreateScreenBottom.style.paddingTop = "1rem"
+twitCreateScreenBottom.style.borderRadius = "15px"
+
 
 const twitCreateScreenBottomIcon1 = document.createElement("i")
 twitCreateScreenBottomIcon1.classList.add("fas" ,"fa-image")
@@ -618,7 +849,7 @@ twitCreateScreenTopCloseBtn.addEventListener(("click") , (event) =>{
 
 
 document.addEventListener(("click") , (event) => {
-  if(event.target === featerTwitCreate || twitCreateScreen.contains(event.target)) {
+  if(event.target === featerTwitCreate || twitCreateScreen.contains(event.target) || twitCreateScreenOptionsArea.contains(event.target) ) {
     return ;
   }
 
@@ -627,5 +858,67 @@ document.addEventListener(("click") , (event) => {
 })
 
 
+const twitCustomizatioArea = document.createElement("div")
+twitCustomizatioArea.classList.add("twit-custommization-area")
+
+
+body.appendChild(twitCustomizatioArea)
+
+const twitCustomizatioAreaBtn1 = document.createElement("button")
+twitCustomizatioAreaBtn1.textContent = "Sil"
+twitCustomizatioAreaBtn1.classList.add("twit-customization-btn")
+twitCustomizatioArea.appendChild(twitCustomizatioAreaBtn1)
+twitCustomizatioAreaBtn1.style.color = "#7a0000"
+
+const twitCustomizatioAreaBtn2 = document.createElement("button")
+twitCustomizatioAreaBtn2.textContent = "Profilden ayır"
+twitCustomizatioAreaBtn2.classList.add("twit-customization-btn")
+twitCustomizatioArea.appendChild(twitCustomizatioAreaBtn2)
+
+const twitCustomizatioAreaBtn3 = document.createElement("button")
+twitCustomizatioAreaBtn3.textContent = "Profilinde öne çıkar"
+twitCustomizatioAreaBtn3.classList.add("twit-customization-btn")
+twitCustomizatioArea.appendChild(twitCustomizatioAreaBtn3)
+
+const twitCustomizatioAreaBtn4 = document.createElement("button")
+twitCustomizatioAreaBtn4.textContent = "@orbuk kullanıcısının listelere ekle /kaldır"
+twitCustomizatioAreaBtn4.classList.add("twit-customization-btn")
+twitCustomizatioArea.appendChild(twitCustomizatioAreaBtn4)
+
+const twitCustomizatioAreaBtn5 = document.createElement("button")
+twitCustomizatioAreaBtn5.textContent = "Kimin yanıtlayabileceğini değiştir"
+twitCustomizatioAreaBtn5.classList.add("twit-customization-btn")
+twitCustomizatioArea.appendChild(twitCustomizatioAreaBtn5)
+
+
+
+const customBtn1Icon = document.createElement("i")
+customBtn1Icon.classList.add("fas" , "fa-trash")
+twitCustomizatioAreaBtn1.appendChild(customBtn1Icon)
+customBtn1Icon.classList.add("twit-custom-icon")
+customBtn1Icon.style.color = "#7a0000"
+
+
+
+const customBtn2Icon = document.createElement("i")
+customBtn2Icon.classList.add("fas","fa-thumbtack")
+twitCustomizatioAreaBtn2.appendChild(customBtn2Icon)
+customBtn2Icon.classList.add("twit-custom-icon")
+
+const customBtn3Icon = document.createElement("i")
+customBtn3Icon.classList.add("fas","fa-wand-magic-sparkles")
+twitCustomizatioAreaBtn3.appendChild(customBtn3Icon)
+customBtn3Icon.classList.add("twit-custom-icon")
+
+const customBtn4Icon = document.createElement("i")
+customBtn4Icon.classList.add("fas" , "fa-list-check")
+twitCustomizatioAreaBtn4.appendChild(customBtn4Icon)
+customBtn4Icon.classList.add("twit-custom-icon")
+
+
+const customBtn5Icon = document.createElement("i")
+customBtn5Icon.classList.add("far" , "fa-comment")
+twitCustomizatioAreaBtn5.appendChild(customBtn5Icon)
+customBtn5Icon.classList.add("twit-custom-icon")
 
 
