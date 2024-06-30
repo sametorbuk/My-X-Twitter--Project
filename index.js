@@ -438,7 +438,7 @@ const twitCustomizatioAreaBtn1 = document.createElement("button")
 twitCustomizatioAreaBtn1.textContent = "Sil"
 twitCustomizatioAreaBtn1.classList.add("twit-customization-btn")
 twitCustomizatioArea.appendChild(twitCustomizatioAreaBtn1)
-twitCustomizatioAreaBtn1.style.color = "#7a0000"
+twitCustomizatioAreaBtn1.style.color = "rgb(191 6 6)"
 
 const twitCustomizatioAreaBtn2 = document.createElement("button")
 twitCustomizatioAreaBtn2.textContent = "Profilden ayır"
@@ -466,7 +466,7 @@ const customBtn1Icon = document.createElement("i")
 customBtn1Icon.classList.add("fas" , "fa-trash")
 twitCustomizatioAreaBtn1.appendChild(customBtn1Icon)
 customBtn1Icon.classList.add("twit-custom-icon")
-customBtn1Icon.style.color = "#7a0000"
+customBtn1Icon.style.color = "rgb(191 6 6);"
 
 
 
