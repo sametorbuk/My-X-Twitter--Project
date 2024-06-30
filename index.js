@@ -994,7 +994,7 @@ tikIco.classList.add('fa', ...iconClasstwo.split(' '))
 btn.appendChild(tikIco)
 tikIco.style.position = "fixed"
 tikIco.style.color = "rgb(13 148 239)"
-tikIco.style.marginLeft = "17rem"
+tikIco.style.marginLeft = "16rem"
 tikIco.style.marginTop = "0.5rem"
 
   
