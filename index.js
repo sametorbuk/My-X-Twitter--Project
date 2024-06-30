@@ -842,6 +842,11 @@ tweetCreateFunc(inputArea.value)
   return;
 }
 
+if(inputArea.value === "" ) {
+  twitCreateScreensumbit.style.color = "#ffffffba"
+  twitCreateScreensumbit.style.background = "rgb(29 155 240 / 63%)"
+}
+
 
 })
 
