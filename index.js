@@ -1026,7 +1026,7 @@ tikIco.style.marginTop = "0.5rem"
 
 
 const leftSideBarMoreOptionsDivBtn1 =btnCreate3("Listeler","fa-solid fa-list-check" , "fa-solid fa-check")
-const leftSideBarMoreOptionsDivBtn2 =btnCreate3("Premium","fa-brands fa-square-x-twitter", "fa-solid fa-check")
+const leftSideBarMoreOptionsDivBtn2 =btnCreate3("Premium","fa-brands fa-x-twitter", "fa-solid fa-check")
 const leftSideBarMoreOptionsDivBtn3 =btnCreate3("Yer İşaretleri","fa-regular fa-bookmark" , "fa-solid fa-check")
 const leftSideBarMoreOptionsDivBtn4 =btnCreate3("Para Kazanma","fa-solid fa-money-bill" , "fa-solid fa-check")
 const leftSideBarMoreOptionsDivBtn5 =btnCreate3("Onaylı kuruluşlar","fa-solid fa-bolt-lightning" , "fa-solid fa-check")
