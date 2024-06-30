@@ -834,8 +834,15 @@ inputArea.addEventListener("input" , (event) => {
   })
 
 twitCreateScreensumbit.addEventListener("click" , (event) => {
-    tweetCreateFunc(inputArea.value)
+    
+  if(inputArea.value !== "") {
+tweetCreateFunc(inputArea.value)
     inputArea.value = ""
+} else {
+  return;
+}
+
+
 })
 
 
