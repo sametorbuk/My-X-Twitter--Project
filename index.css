@@ -43,6 +43,15 @@ body {
    
 }
 
+.left-side-bar-more-options {
+   width: 18rem;
+    background: black;
+    height: 26rem;
+    left: 6rem;
+    z-index: 200001;
+    display: none;
+    flex-direction: column;
+}
 
 
 
@@ -1210,7 +1219,7 @@ samet
         width: 2rem;
     }
 
-    
+
 
     .left-sidebar :nth-child(1) {
         position: relative;

@@ -937,3 +937,97 @@ twitCustomizatioAreaBtn5.appendChild(customBtn5Icon)
 customBtn5Icon.classList.add("twit-custom-icon")
 
 
+
+
+
+const leftSideBarMoreOptionsDiv = document.createElement("div")
+leftSideBarMoreOptionsDiv.style.position = "fixed"
+leftSideBarMoreOptionsDiv.classList.add("left-side-bar-more-options")
+body.appendChild(leftSideBarMoreOptionsDiv)
+
+const btnCreate3 = (explain , iconClass , iconClasstwo) => {
+   
+  const btn = document.createElement("button")
+  leftSideBarMoreOptionsDiv.appendChild(btn)
+  const btnp = document.createElement("p")
+  btnp.textContent = explain
+  btn.appendChild(btnp)
+  btnp.style.marginBottom = "0"
+  btnp.style.marginTop = "0.5rem"
+  btnp.style.marginLeft = "1rem"
+  btnp.style.whiteSpace = "nowrap"
+
+  const ico= document.createElement("i")
+  ico.classList.add('fa', ...iconClass.split(' '))
+  btn.appendChild(ico)
+  btn.style.color = "white"
+  btn.style.background = "black"
+
+  const tikIco = document.createElement("i")
+tikIco.classList.add('fa', ...iconClasstwo.split(' '))
+btn.appendChild(tikIco)
+tikIco.style.position = "fixed"
+tikIco.style.color = "rgb(13 148 239)"
+tikIco.style.marginLeft = "17rem"
+tikIco.style.marginTop = "0.5rem"
+
+  
+  ico.style.backgroundColor = "black"
+  btn.style.display = "flex"
+  ico.style.order = "-1"
+  ico.style.fontSize = "xx-large"
+  ico.style.width = "3.3rem"
+  ico.style.height="2rem"
+  ico.style.borderRadius = "5px"
+  ico.style.color = "white"
+
+  btn.style.marginBottom = "1rem"
+ tikIco.style.display = "none"
+
+ btn.addEventListener("click" , (e) => {
+  tikIco.style.display = "block"
+ })
+
+ document.addEventListener("click" , (event) => {
+  if(event.target === btn || btn.contains(event.target)) {
+     return ;
+  } 
+    tikIco.style.display = "none"
+  })
+
+  return btn
+}
+
+
+const leftSideBarMoreOptionsDivBtn1 =btnCreate3("Listeler","fa-solid fa-list-check" , "fa-solid fa-check")
+const leftSideBarMoreOptionsDivBtn2 =btnCreate3("Premium","fa-brands fa-square-x-twitter", "fa-solid fa-check")
+const leftSideBarMoreOptionsDivBtn3 =btnCreate3("Yer İşaretleri","fa-regular fa-bookmark" , "fa-solid fa-check")
+const leftSideBarMoreOptionsDivBtn4 =btnCreate3("Para Kazanma","fa-solid fa-money-bill" , "fa-solid fa-check")
+const leftSideBarMoreOptionsDivBtn5 =btnCreate3("Onaylı kuruluşlar","fa-solid fa-bolt-lightning" , "fa-solid fa-check")
+const leftSideBarMoreOptionsDivBtn6 =btnCreate3("Reklamlar","fa-solid fa-square-arrow-up-right", "fa-solid fa-check")
+const leftSideBarMoreOptionsDivBtn7 =btnCreate3("İşler","fa-solid fa-briefcase" , "fa-solid fa-check")
+const leftSideBarMoreOptionsDivBtn8 = btnCreate3("Sohbet odanı oluştur" , "fa-solid fa-microphone-lines" , "fa-solid fa-check")
+const leftSideBarMoreOptionsDivBtn9 = btnCreate3("Ayarlar ve gizlilik", "fa-solid fa-gear" , "fa-solid fa-check")
+
+
+const leftSideBarMoreOptionsBtn = document.getElementById("left-side-bar-more-options-btn")
+const leftSideBarMoreOptionsIcon = document.getElementById("left-side-bar-more-options-icon")
+
+leftSideBarMoreOptionsIcon.addEventListener("click" , (event) => {
+  leftSideBarMoreOptionsDiv.style.display = "flex"
+})
+
+leftSideBarMoreOptionsBtn.addEventListener("click" , (event) => {
+  leftSideBarMoreOptionsDiv.style.display = "flex"
+})
+
+
+
+document.addEventListener("click" , (event) => {
+  if(event.target === leftSideBarMoreOptionsBtn  || leftSideBarMoreOptionsDiv.contains(event.target) || leftSideBarMoreOptionsIcon.contains(event.target)) {
+    return ;
+  }
+
+  leftSideBarMoreOptionsDiv.style.display = "none"
+})
+
