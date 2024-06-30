@@ -296,6 +296,14 @@ const btnCreate = (explain , iconClass , iconClasstwo) => {
   btnp.style.marginLeft = "1rem"
   btnp.style.whiteSpace = "nowrap"
 
+  btn.addEventListener("mouseenter" , (event) => {
+    btn.style.backgroundColor = "#80808057"
+  })
+  
+  btn.addEventListener("mouseleave" , (event) => {
+    btn.style.backgroundColor = "black"
+  })
+
   const ico= document.createElement("i")
   ico.classList.add('fa', ...iconClass.split(' '))
   btn.appendChild(ico)
@@ -663,7 +671,7 @@ inputArea.placeholder = "Neler oluyor?"
 inputArea.classList.add("twit-screen-input")
 
 const twitCreateScreenPrivacyOptions = document.createElement("button")
-twitCreateScreenPrivacyOptions.textContent = "Sadece bashettiklerin yanıtlayabilir"
+twitCreateScreenPrivacyOptions.textContent = "Sadece bahsettiklerin yanıtlayabilir"
 twitCreateScreenPrivacyOptions.style.color = "rgb(29, 155, 240)"
 twitCreateScreenPrivacyOptions.style.background = "black"
 twitCreateScreen.appendChild(twitCreateScreenPrivacyOptions)
@@ -690,6 +698,14 @@ const btnCreate2 = (explain , iconClass , iconClasstwo) => {
   btnp.style.marginTop = "0.5rem"
   btnp.style.marginLeft = "1rem"
   btnp.style.whiteSpace = "nowrap"
+
+  btn.addEventListener("mouseenter" , (event) => {
+    btn.style.backgroundColor = "#80808057"
+  })
+  
+  btn.addEventListener("mouseleave" , (event) => {
+    btn.style.backgroundColor = "black"
+  })
 
   const ico= document.createElement("i")
   ico.classList.add('fa', ...iconClass.split(' '))
@@ -957,6 +973,16 @@ const btnCreate3 = (explain , iconClass , iconClasstwo) => {
   btnp.style.marginLeft = "1rem"
   btnp.style.whiteSpace = "nowrap"
 
+  btn.addEventListener("mouseenter" , (event) => {
+  btn.style.backgroundColor = "#80808057"
+})
+
+btn.addEventListener("mouseleave" , (event) => {
+  btn.style.backgroundColor = "black"
+})
+
+
+
   const ico= document.createElement("i")
   ico.classList.add('fa', ...iconClass.split(' '))
   btn.appendChild(ico)
@@ -1030,4 +1056,9 @@ document.addEventListener("click" , (event) => {
 
   leftSideBarMoreOptionsDiv.style.display = "none"
 })
+
+window.addEventListener( "scroll" , (event) => {
+  leftSideBarMoreOptionsDiv.style.display = "none"
+})
+
 

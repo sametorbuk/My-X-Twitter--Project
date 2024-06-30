@@ -46,11 +46,16 @@ body {
 .left-side-bar-more-options {
    width: 18rem;
     background: black;
-    height: 26rem;
+    height: 28rem;
     left: 6rem;
     z-index: 200001;
     display: none;
     flex-direction: column;
+    border-radius: 20px;
+}
+
+.left-side-bar-more-options button:hover {
+    background-color: #80808057;
 }
 
 
